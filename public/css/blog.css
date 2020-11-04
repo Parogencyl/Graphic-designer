@@ -1,0 +1,181 @@
+#mainText {
+    font-size: 18px;
+    color: rgb(252, 252, 252);
+    text-shadow: 0 0 2px rgb(0, 0, 0);
+}
+
+#blogUnderline {
+    border-bottom: solid 2px rgb(41, 30, 83);
+    border-color: transparent transparent rgb(41, 30, 83) transparent;
+    border-radius: 0 0 30% 80%/30px;
+}
+
+#header {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.bgImage {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    box-shadow: 0px 25em 2em -23.5em #f8f9fa inset,
+        0em -25em 2em -23.5em #f8f9fa inset;
+}
+
+.darkening {
+    background-color: rgba(0, 0, 0, 0.7);
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+}
+
+article img {
+    width: 100%;
+    height: 350px;
+}
+
+section nav ul li {
+    font-size: 20px;
+}
+
+.borderLeft {
+    height: 50px;
+    width: 7px;
+    margin-right: 42px;
+    background-color: rgb(172, 98, 14);
+    transition: 1s;
+}
+
+.groupText:hover .borderLeft {
+    height: 100%;
+}
+
+.groupText a {
+    background-color: rgb(219, 117, 0);
+    color: white;
+    transition: 0.8s;
+}
+.groupText a:hover {
+    background-color: rgb(172, 98, 14);
+    color: white;
+}
+
+.groupText div:nth-child(2) {
+    width: calc(100% - 50px);
+}
+
+.articleText {
+    font-size: 17px;
+}
+
+aside a {
+    text-decoration: none !important;
+    color: rgb(219, 117, 0);
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+aside a:hover {
+    color: rgb(172, 98, 14);
+}
+aside i {
+    font-size: 0.5rem;
+}
+
+aside p {
+    font-size: 16px;
+}
+
+.borderTop {
+    width: 100%;
+    height: 10px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    border-radius: 95% 0;
+    background-color: rgb(172, 98, 14);
+}
+
+#tags a {
+    background-color: rgb(219, 117, 0);
+    color: white;
+    text-transform: uppercase;
+    transition: 0.8s;
+}
+
+#tags a:hover {
+    background-color: rgb(172, 98, 14);
+}
+
+.fb {
+    opacity: 8;
+    transition: 1s;
+    font-size: 2rem;
+    color: black;
+    margin-top: 10px;
+}
+
+.fb:hover {
+    opacity: 1;
+}
+
+.shake {
+    animation-name: shake;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotateZ(0);
+    }
+    5% {
+        transform: rotateZ(-5deg);
+    }
+    10% {
+        transform: rotateZ(5deg);
+    }
+
+    15% {
+        transform: rotateZ(0);
+    }
+    20% {
+        transform: rotateZ(-5deg);
+    }
+    25% {
+        transform: rotateZ(5deg);
+    }
+    30%,
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .articleText {
+        font-size: 16px;
+    }
+    .carousel-inner img {
+        height: 250px;
+    }
+    .borderLeft {
+        height: 100%;
+    }
+
+    aside {
+        padding-top: 40px;
+        margin-top: 40px;
+        border-top: 1px solid gray;
+    }
+}

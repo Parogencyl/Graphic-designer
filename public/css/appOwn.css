@@ -1,0 +1,53 @@
+* {
+    scroll-behavior: smooth;
+    scroll-margin: 60px;
+}
+
+#nav {
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 17px;
+    transition: 0.8s;
+    padding: 2px;
+}
+
+.navbar-toggler {
+    z-index: 10;
+}
+
+li {
+    position: relative;
+}
+
+li:hover .navUnderline {
+    position: absolute;
+    top: 0;
+    height: 90%;
+    width: 100%;
+    border-bottom: solid 2px rgb(41, 30, 83);
+    border-color: transparent transparent rgb(41, 30, 83) transparent;
+    border-radius: 0 0 10px 30%;
+    transition: 0.4s;
+    animation-name: underline;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    z-index: -2;
+}
+
+@keyframes underline {
+    0% {
+        margin-left: 50%;
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #nav {
+        background-color: #fff;
+        box-shadow: 5px 0 10px 2px rgb(129, 129, 129);
+    }
+}
