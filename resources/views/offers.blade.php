@@ -3,7 +3,7 @@
 <link href="{{ asset('css/index.css') }}" rel="stylesheet">
 <link href="{{ asset('css/offers.css') }}" rel="stylesheet">
 
-<?
+<?php
     if(session('language') == 'pl'){
         $lan = 'pl';
     } else {

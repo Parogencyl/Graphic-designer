@@ -2,7 +2,7 @@
 
 <link href="{{ asset('css/blog.css') }}" rel="stylesheet">
 
-<? 
+<?php 
     // wszystkie posty 
     $posts = DB::table('blog')->orderBy('created_at', 'DESC')->get();
 

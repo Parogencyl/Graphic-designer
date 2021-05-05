@@ -2,7 +2,7 @@
 
 <link href="{{ asset('css/blog.css') }}" rel="stylesheet">
 
-<? 
+<?php
 
     $posts = DB::table('blog')->orderBy('created_at', 'DESC')->paginate(3);
 
@@ -251,6 +251,7 @@
             @else
             {{ $posts->render() }}
             @endif
+
         </section>
 
 

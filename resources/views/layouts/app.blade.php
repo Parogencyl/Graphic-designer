@@ -1,4 +1,4 @@
-<?
+<?php
     
     if(session('language') == 'pl'){
         $lan = 'pl';
@@ -38,6 +38,7 @@
 
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,9 +62,10 @@
     <!-- zaimportowane za pomocą pliku sass w public, a wcześniej uruchomione polecenie npm run production -->
 
     <!-- Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
-        
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/appOwn.css') }}" rel="stylesheet">
@@ -77,7 +79,9 @@
                 <a class="navbar-brand p-0" href="{{ url('/') }}">
                     <img src="{{ asset('graphics/logo.jpg') }}" alt="logo" class="p-0" style="height: 66px">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -89,19 +93,41 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto text-dark text-center">
-                        <li class="nav-item mr-2"> <a class="nav-link text-dark font-weight-bold navLink pb-0"  href="{{ url('/#baner') }}"> {{ $lang[$lan]['homeButton'] }} </a> <div class="navUnderline"> </div> <li>
-                        <li class="nav-item mr-2"> <a class="nav-link text-dark font-weight-bold navLink pb-0"  href="{{ url('/#about') }}"> {{ $lang[$lan]['aboutButton'] }} </a> <div class="navUnderline"> </div> <li>
-                        <li class="nav-item mr-2"> <a class="nav-link text-dark font-weight-bold navLink pb-0"  href="{{ url('/#projects') }}"> {{ $lang[$lan]['projectsButton'] }} </a> <div class="navUnderline"> </div> <li>
-                        <li class="nav-item mr-2"> <a class="nav-link text-dark font-weight-bold navLink pb-0"  href="{{ url('/offers')}}"> {{ $lang[$lan]['offersButton'] }} </a> <div class="navUnderline"> </div> <li>
-                        <li class="nav-item mr-2"> <a class="nav-link text-dark font-weight-bold navLink pb-0"  href="{{ url('/#contact') }}"> {{ $lang[$lan]['contactButton'] }} </a> <div class="navUnderline"> </div> <li>
-                        <li class="nav-item mr-2"> <a class="nav-link text-dark font-weight-bold navLink pb-0"  href="{{ url('/blog') }}"> {{ $lang[$lan]['blogButton'] }} </a> <div class="navUnderline"> </div> <li>
+                        <li class="nav-item mr-2"> <a class="nav-link text-dark font-weight-bold navLink pb-0"
+                                href="{{ url('/#baner') }}"> {{ $lang[$lan]['homeButton'] }} </a>
+                            <div class="navUnderline"> </div>
+                        <li>
+                        <li class="nav-item mr-2"> <a class="nav-link text-dark font-weight-bold navLink pb-0"
+                                href="{{ url('/#about') }}"> {{ $lang[$lan]['aboutButton'] }} </a>
+                            <div class="navUnderline"> </div>
+                        <li>
+                        <li class="nav-item mr-2"> <a class="nav-link text-dark font-weight-bold navLink pb-0"
+                                href="{{ url('/#projects') }}"> {{ $lang[$lan]['projectsButton'] }} </a>
+                            <div class="navUnderline"> </div>
+                        <li>
+                        <li class="nav-item mr-2"> <a class="nav-link text-dark font-weight-bold navLink pb-0"
+                                href="{{ url('/offers')}}"> {{ $lang[$lan]['offersButton'] }} </a>
+                            <div class="navUnderline"> </div>
+                        <li>
+                        <li class="nav-item mr-2"> <a class="nav-link text-dark font-weight-bold navLink pb-0"
+                                href="{{ url('/#contact') }}"> {{ $lang[$lan]['contactButton'] }} </a>
+                            <div class="navUnderline"> </div>
+                        <li>
+                        <li class="nav-item mr-2"> <a class="nav-link text-dark font-weight-bold navLink pb-0"
+                                href="{{ url('/blog') }}"> {{ $lang[$lan]['blogButton'] }} </a>
+                            <div class="navUnderline"> </div>
+                        <li>
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle text-dark font-weight-bold navLink" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle text-dark font-weight-bold navLink"
+                                href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                v-pre>
                                 {{ $lang[$lan]['lang'] }}
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item font-weight-bold" href="{{ url('/setPlLanguage') }}"> {{ $lang[$lan]['polish'] }} </a>
-                                <a class="dropdown-item font-weight-bold" href="{{ url('/setEngLanguage') }}">{{ $lang[$lan]['english'] }} </a>
+                                <a class="dropdown-item font-weight-bold" href="{{ url('/setPlLanguage') }}">
+                                    {{ $lang[$lan]['polish'] }} </a>
+                                <a class="dropdown-item font-weight-bold"
+                                    href="{{ url('/setEngLanguage') }}">{{ $lang[$lan]['english'] }} </a>
                             </div>
                         </li>
                     </ul>
@@ -118,4 +144,5 @@
 <footer class="mt-auto">
     <p class="bg-dark text-light mb-0 text-center p-2"> &copy;2020 Damian Bohonos. {{ $lang[$lan]['footer'] }} </p>
 </footer>
+
 </html>

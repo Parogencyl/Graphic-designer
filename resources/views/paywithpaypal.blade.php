@@ -5,8 +5,7 @@
     // Required. Replace SB_CLIENT_ID with your sandbox client ID.
 </script>
 
-<?
-
+<?php
     $price = substr(session('price'), 0, -1);
 
     if(session('language') == 'pl'){

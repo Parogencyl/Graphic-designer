@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-<? 
+<?php 
     $products = DB::table('projects')->orderBy('id', 'desc')->get();
 
     if(session('language') == 'pl'){
@@ -18,7 +18,8 @@
 
 <section class="container text-center">
     <h1 class="font-weight-bold" style="padding-top: 120px" id="header"> {{ $lang[$lan]['titleMain'] }} </h1>
-    <h5 class="font-weight-bold col-md-6 col-10 ml-auto mr-auto mb-4 pb-2" id="projectsUnderline"> {{ $lang[$lan]['titleSecond'] }} </h5>
+    <h5 class="font-weight-bold col-md-6 col-10 ml-auto mr-auto mb-4 pb-2" id="projectsUnderline">
+        {{ $lang[$lan]['titleSecond'] }} </h5>
 </section>
 
 <section class="position-relative p-3 pt-5 pb-5">
@@ -32,18 +33,27 @@
 <section class="container mb-5" id="projects">
     <div class="row justify-content-center pt-5 m-0 text-center">
         <div class="row pl-5 pr-5 w-100" role="group" class="programs">
-            <button type="submit" data-filter="all" class="filter-btn btn btn-primary col-md-3 col-sm-6 col-12 border mb-2" style="font-size: 17px"> {{ $lang[$lan]['Button1'] }} </button>
-            <button type="submit" data-filter=".logo" class="filter-btn btn btn-primary col-md-3 col-sm-6 col-12 border mb-2" style="font-size: 17px"> {{ $lang[$lan]['Button2'] }} </button>
-            <button type="submit" data-filter=".webPage" class="filter-btn btn btn-primary col-md-3 col-sm-6 col-12 border mb-2" style="font-size: 17px"> {{ $lang[$lan]['Button3'] }} </button>
-            <button type="submit" data-filter=".advertisement" class="filter-btn btn btn-primary col-md-3 col-sm-6 col-12 border mb-2" style="font-size: 17px"> {{ $lang[$lan]['Button4'] }} </button>
+            <button type="submit" data-filter="all"
+                class="filter-btn btn btn-primary col-md-3 col-sm-6 col-12 border mb-2" style="font-size: 17px">
+                {{ $lang[$lan]['Button1'] }} </button>
+            <button type="submit" data-filter=".logo"
+                class="filter-btn btn btn-primary col-md-3 col-sm-6 col-12 border mb-2" style="font-size: 17px">
+                {{ $lang[$lan]['Button2'] }} </button>
+            <button type="submit" data-filter=".webPage"
+                class="filter-btn btn btn-primary col-md-3 col-sm-6 col-12 border mb-2" style="font-size: 17px">
+                {{ $lang[$lan]['Button3'] }} </button>
+            <button type="submit" data-filter=".advertisement"
+                class="filter-btn btn btn-primary col-md-3 col-sm-6 col-12 border mb-2" style="font-size: 17px">
+                {{ $lang[$lan]['Button4'] }} </button>
         </div>
     </div>
 
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 pt-3 m-0 justify-content-center text-center" id="mix-wrapper">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 pt-3 m-0 justify-content-center text-center"
+        id="mix-wrapper">
     </div>
 
-        <script>
-            let array = <?php echo json_encode($products); ?>;
+    <script>
+        let array = <?php echo json_encode($products); ?>;
             let addArray = [...array];
             let lang = <?php echo json_encode($lang); ?>;
             let lan = <?php echo json_encode($lan); ?>;
@@ -126,7 +136,7 @@
             }
   
 
-        </script>
+    </script>
 
 </section>
 
